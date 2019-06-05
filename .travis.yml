@@ -10,4 +10,4 @@ before_install:
 
 
 scripts:
-  - docker run ocobas/docker-react-sample npm run test
+  - docker run ocobas/docker-react-sample npm run test -- --coverage
