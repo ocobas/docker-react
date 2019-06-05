@@ -1,10 +1,13 @@
 sudo: required
 
+
 services:
   - docker
 
+
 before_install:
   - docker build -t ocobas/docker-react-sample -f Dockerfile.dev .
+
 
 scripts:
   - docker run ocobas/docker-react-sample npm run test -- --coverage
