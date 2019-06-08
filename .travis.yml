@@ -1,24 +1,9 @@
-sudo: required 
-
-language: ruby
-
-rvm:
-  - 1.9.3
-  - 2.0.0
-  - 2.1.0
-  - 2.1.1
-  - 2.4.1
-
-gemfile:
-  - gemfiles/rails3_2.gemfile
-  - gemfiles/rails4_0.gemfile
-  - gemfiles/rails4_1.gemfile
+sudo: required
 
 services:
   - docker
 
 before_install:
-  - gem install bundler
   - docker build -t ocobas/docker-react-sample -f Dockerfile.dev .
 
 scripts:
