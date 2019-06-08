@@ -8,5 +8,7 @@ before_install:
   - gem install bundler
   - docker build -t ocobas/docker-react-sample -f Dockerfile.dev .
 
+script: "rake"
+
 scripts:
   - docker run ocobas/docker-react-sample npm run test -- --coverage
