@@ -1,14 +1,13 @@
-sudo: required
+sudo: required 
 
 services:
   - docker
 
 before_install:
-  - export GEM_HOME=$PWD/vendor/bundle/ruby/2.1.0
+  - 
+  - export GEM_HOME=$PWD/vendor/bundle/ruby/2.4.1
   - gem install bundler
   - docker build -t ocobas/docker-react-sample -f Dockerfile.dev .
-
-script: "rake"
 
 scripts:
   - docker run ocobas/docker-react-sample npm run test -- --coverage
