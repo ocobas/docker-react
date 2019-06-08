@@ -7,4 +7,3 @@ before_install:
   - 
   - export GEM_HOME=$PWD/vendor/bundle/ruby/2.4.1
   - gem install bundler
-  - docker build -t ocobas/docker-react-sample -f Dockerfile.dev .
