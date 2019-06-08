@@ -1,10 +1,6 @@
 sudo: required
 
-language: ruby
-rvm:
-  - 2.2
-  - jruby
-  - truffleruby
+install: gem install rails
 
 services:
   - docker
